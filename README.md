@@ -29,11 +29,11 @@
 
 <details>
  <summary> Jogo </summary>
-`- Desenvolvedores:`
+ `- Desenvolvedores:`
+ >- Gabriel Gaudi
  >- Daniel Ryu
- >- Guilherme Henrique
  >- Christian Varandas
- >- Gabriel Gaudi 
+ >- Guilherme Henrique
 
  ## Mecânicas do Jogo:
 
@@ -45,12 +45,11 @@ Nosso jogo, para se diferenciar do Whac-a-Mole original que continha uma temáti
 
 <details>
  <summary> Site </summary>
- 
-`- Desenvolvedores:`
+ `- Desenvolvedores:`
  >- Bruno Queiroz
- >-  Igor Cafazzi
- >-  Henrique Kenji
- >-  Guilherme Henrique
+ >- Igor Cafazzi
+ >- Henrique Kenji
+ >- Guilherme Henrique
 
 ## Funções do Site:
 
