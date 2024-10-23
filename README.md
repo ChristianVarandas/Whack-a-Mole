@@ -23,4 +23,4 @@
  Em sala de aula, após separarmos os grupos, escolhemos uma das 4 opções de jogos que tinham para assim, iniciar a criação de um "remake" do jogo (ou seja, refazer o jogo e trocar o seu design ou algumas mecânicas). Enfim, com o jogo escolhido e o grupo separado, dividimos o jogo em partes para facilitar o desenvolvimento do mesmo.
 
 > [!NOTE]
->- `Gameplay`:
+> `Gameplay`:
