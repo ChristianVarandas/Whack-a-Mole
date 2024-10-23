@@ -1,0 +1,43 @@
+/*{
+    background-color: rgb(31, 73, 128);
+	
+	
+}*/
+/*h1,h2{
+	position: absolute;
+}*/
+
+body{
+	background-image: url(../img/fundo2.jpeg);
+}
+
+.grid {
+    /* background-color: black; */
+	width: 850px;
+	height: 750px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.square {
+	height: 250px;
+	width: 283.34px;
+	/*border: solid black 1px;*/
+	background: url(../img/babysac.png);
+	background-size: 270px;
+	
+    /* background-color: rgba(122, 206, 231, 0); */
+    
+}
+
+
+
+#tela{
+    /*background-color: rgba(40, 194, 194, 0.993);*/
+    width: 840px;
+    height: 750px;
+    background: url(../img/fundo.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
