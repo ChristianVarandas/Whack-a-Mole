@@ -21,8 +21,9 @@
 
 > [!NOTE]
 > `- Alterações`:
-`- Design:` Para o design, utilizamos de base o jogo "Subnautica" para diferenciar o nosso jogo do original. Com isso, adicionamos imagens do próprio jogo e tiramos algumas ideias baseadas no mesmo, além de priorizar o uso de cores relacionadas ao ele.
-`- Mecânica:` Para acrescentar alguma coisa ao jogo já existente, Whack-a-Mole, foi-se adicionado uma mecânica que ao chegar a determinada quantidade de pontos, o "grid" (parte aonde aparece os obstáculos do jogo) aumenta de tamanho para que assim aumenta a área do jogo e aumente minimamente a dificuldade, além de adicionar algo que faça o jogo não ser muito monótono.
+>- `- Design:`  Para o design, utilizamos de base o jogo "Subnautica" para diferenciar o nosso jogo do original. Com isso, adicionamos imagens do próprio jogo e tiramos algumas ideias baseadas no mesmo, além de
+priorizar o uso de cores relacionadas ao ele.
+>- `- Mecânica:`  Para acrescentar alguma coisa ao jogo já existente, Whack-a-Mole, foi-se adicionado uma mecânica que ao chegar a determinada quantidade de pontos, o "grid" (parte aonde aparece os obstáculos do jogo) aumenta de tamanho para que assim aumenta a área do jogo e aumente minimamente a dificuldade, além de adicionar algo que faça o jogo não ser muito monótono.
 
 > [!NOTE]
 > `- Gameplay`:
