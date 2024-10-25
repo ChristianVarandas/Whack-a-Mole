@@ -27,15 +27,13 @@
 > `- Gameplay`:
 
 
+
 <details>
  <summary> Jogo </summary>
- `- Desenvolvedores:`
- >- Gabriel Gaudi
- >- Daniel Ryu
- >- Christian Varandas
- >- Guilherme Henrique
+
 
  ## Mecânicas do Jogo:
+ A mecânica do jogo é simples e se baseia no jogador clicar no "Reaper Leviathan" (o "obstáculo" do jogo que no sentido do jogo seria um tipo inimigo que precisa ser destruido) para conseguir pontos e não clicar no "Sea Emperor Leviathan" (que seria, no contexto do jogo, um "aliado" do jogador e por isso não poderia ser clicado, pois se for feito, será considerado como "GameOver") para assim não perder o jogo.
 
  ## Design do Jogo:
 Nosso jogo, para se diferenciar do Whac-a-Mole original que continha uma temática do personagem Mario da Nintendo, utilizou de inspiração o jogo "Subnautica" para o design dos personagens e do cenário em si. Algumas dessas imagens foram pegas do próprio jogo, como é o caso da imagem de fundo, entretanto, outras tiveram de ser feitas por nós mesmos devido a falta delas na internet, como foi o caso do redemoinho de água.
@@ -45,14 +43,12 @@ Nosso jogo, para se diferenciar do Whac-a-Mole original que continha uma temáti
 
 <details>
  <summary> Site </summary>
- `- Desenvolvedores:`
- >- Bruno Queiroz
- >- Igor Cafazzi
- >- Henrique Kenji
- >- Guilherme Henrique
+
 
 ## Funções do Site:
 
+## Design do Site:
+ Como no jogo, o design do site se inspira nas artes e personagens de "Subnautica" para a composição do visual do navegador.
 
 </details>
 
@@ -60,13 +56,11 @@ Nosso jogo, para se diferenciar do Whac-a-Mole original que continha uma temáti
 
 <details>
  <summary> Design Geral </summary>
-`- Desenvolvedores:`
- >- Daniel Carvalho
- >- Bruno Queiroz Plata
- >- Christian Varandas
- >- Henrique Kenji
- >- Igor Cafazzi
 
-## Design:
+## Design Geral:
+
+## Cartaz: 
+
+
  
 </details> 
