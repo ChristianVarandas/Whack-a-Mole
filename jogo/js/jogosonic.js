@@ -2,7 +2,8 @@ let currMoleTile;
 let currPlantTile;
 let score = 0;
 let gameOver = false;
-let gameTiles = 9
+let gameTiles = 9;
+let time = 60;
 
 window.onload = function() {
     setGame();
@@ -13,15 +14,19 @@ window.onload = function() {
 }
 
 function setGame(){
-    /*for(let i = 0;i<9;i++){
-        let tile = document.createElement("div");
-        tile.id = i.toString();
-        tile.addEventListener("click",selectTile);
-        document.getElementById("grid").appendChild(tile);
-
-    }*/
+    setInterval(timer, 1000);
     setInterval(setMole, 1000);
     setInterval(setPlant, 2000);
+}
+
+function timer(){
+    if(gameOver){return};
+    document.getElementById("timer").innerText = "Tempo: " + time.toString();
+    time --;
+    if(time < 0){
+        document.getElementById("score").innerText = "GAME OVER: " + score.toString(); 
+        gameOver = true;
+    }
 }
 
 function currentDifficulty(){
