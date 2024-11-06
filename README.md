@@ -48,6 +48,8 @@ Nosso jogo, para se diferenciar do Whac-a-Mole original que continha uma temáti
 
 
 ## Funções do Site:
+ O site, além de programado a mão por nossa equipe, também conta com as funções gerais de um site e algum acrescento.
+
 
 ## Design do Site:
  Como dito no design do jogo, o mesmo se inspira nas artes, personagens e paletas de cores do "Subnautica" para a composição visual de nosso navegador. O site, além de falar sobre o jogo, também mostrará a equipe de desenvolvimento de cada parte do projeto ao todo, contendo também um tutorial para ensinar novos jogadores a, como é de se imaginar, jogar o jogo ao explicar a mecânica e os controles (que só necessita de um mouse qualquer para ser jogado).
