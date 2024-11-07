@@ -64,7 +64,7 @@ function setMole(){
     }
 
 let mole = document.createElement("img");
-mole.src = "./img/monty-mole210.png";
+mole.src = "./img/inimigo.png";
 
 let num = getRandomTile();
 if (currPlantTile && currPlantTile.id == num) {
