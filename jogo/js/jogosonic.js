@@ -1,9 +1,9 @@
-let currMoleTile;
-let currPlantTile;
+let BabyLeviatanTile;
+let LeviatanTile;
 let score = 0;
 let gameOver = false;
 let gameTiles = 9;
-let time = 60;
+let time = 30;
 
 window.onload = function() {
     setGame();
@@ -15,8 +15,8 @@ window.onload = function() {
 
 function setGame(){
     setInterval(timer, 1000);
-    setInterval(setMole, 1000);
-    setInterval(setPlant, 2000);
+    setInterval(setBaby, 1000);
+    setInterval(setLeviatan, 2000);
 }
 
 function timer(){
@@ -26,6 +26,7 @@ function timer(){
     if(time < 0){
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); 
         gameOver = true;
+        window.location.href = "vitoria.html"
     }
 }
 
@@ -47,6 +48,8 @@ if(difficulty == 2){
     }
     gameTiles = 12;
     document.getElementById("tela").style.width = "840px";
+    document.body.style.backgroundImage = 'url(../img/fundo1.jpeg)'
+    document.body.style.color = 'white'
     console.log("eba")
 }
 }
@@ -57,57 +60,58 @@ function getRandomTile() {
     return num.toString();
 }
 
-function setMole(){
+function setBaby(){
     if(gameOver){return;}
-    if(currMoleTile){
-        currMoleTile.innerHTML = "";
+    if(BabyLeviatanTile){
+        BabyLeviatanTile.innerHTML = "";
     }
 
-let mole = document.createElement("img");
-mole.src = "./img/inimigo.png";
+let baby = document.createElement("img");
+baby.src = "./img/inimigo.png";
 
 let num = getRandomTile();
-if (currPlantTile && currPlantTile.id == num) {
+if (LeviatanTile && LeviatanTile.id == num) {
     return;
 }
-currMoleTile = document.getElementById(num);
-currMoleTile.appendChild(mole);
+BabyLeviatanTile = document.getElementById(num);
+BabyLeviatanTile.appendChild(baby);
 }
 
-function setPlant() {
+function setLeviatan() {
     if (gameOver) {
         return;
     }
-    if (currPlantTile) {
-        currPlantTile.innerHTML = "";
+    if (LeviatanTile) {
+        LeviatanTile.innerHTML = "";
     }
-    let plant = document.createElement("img");
-    plant.src = "img/babysac210.png";
+    let leviatan = document.createElement("img");
+    leviatan.src = "img/babysac210.png";
 
     let num = getRandomTile();
-    if (currMoleTile && currMoleTile.id == num) {
+    if (BabyLeviatanTile && BabyLeviatanTile.id == num) {
         return;
     }
-    currPlantTile = document.getElementById(num);
-    currPlantTile.appendChild(plant);
+    LeviatanTile = document.getElementById(num);
+    LeviatanTile.appendChild(leviatan);
 }
 
 function selectTile() {
     if (gameOver) {return;}
 
-    if(this == currMoleTile){
+    if(this == BabyLeviatanTile){
         if(score == 90){
             currentDifficulty();
         }
         score += 10;
         document.getElementById("score").innerText = score.toString();
-        currMoleTile = 
-        currMoleTile.innerHTML = "";
+        BabyLeviatanTile = 
+        BabyLeviatanTile.innerHTML = "";
         
 
     }
-    else if (this == currPlantTile) {
+    else if (this == LeviatanTile) {
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); 
         gameOver = true;
+        window.location.href = "derrota.html"
     }
 }

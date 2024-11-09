@@ -1,7 +1,9 @@
-
+html{
+	cursor: url(../img/maoRobo128.png) 2 2, pointer;
+}
 body{
 	text-align: center;
-	background-image: url(../img/fundo2.jpeg);
+	background-image: url(../img/fundo1.jpeg);
 	background-repeat:no-repeat;
 	background-size: cover;
 }
@@ -30,11 +32,8 @@ body{
 
 	background-size: cover;
 	align-self: center;
-
     user-select: none;
 }
-
-
 
 .square image{
     width: 100px;
