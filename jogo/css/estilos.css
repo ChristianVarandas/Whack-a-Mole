@@ -46,3 +46,20 @@ body{
 	font-size: 60px;
 	margin-left: 30px;
 }
+
+button{
+	width: 150px;
+	height: 50px;
+	font-size: 32px;
+	background-color: rgb(115, 194, 194);
+}
+
+#derrota{
+	font-size: 92px;
+	color: aliceblue;
+}
+
+#PontoFim{
+	font-size: 62px;
+	color: aliceblue;
+}
