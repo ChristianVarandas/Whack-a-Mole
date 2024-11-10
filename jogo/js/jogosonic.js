@@ -26,7 +26,7 @@ function timer(){
     if(time < 0){
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); 
         gameOver = true;
-        window.location.href = "vitoria.html"
+        window.location.href = "derrota.html"
     }
 }
 
