@@ -26,7 +26,20 @@ body{
 	border-radius: 20px;
 }
 
-.square {
+.grid div{
+	height: 210px;
+	width: 210px;
+
+	background-size: cover;
+	align-self: center;
+    user-select: none;
+}
+
+.grid div image{
+	width: 100px;
+    height: 100px;
+}
+/*.square {
 	height: 210px;
 	width: 210px;
 
@@ -38,7 +51,7 @@ body{
 .square image{
     width: 100px;
     height: 100px;
-}
+}*/
 
 #timer{
 	position: absolute;
@@ -49,4 +62,5 @@ body{
 
 #space{
 	height: 0;
+	color: black;
 }

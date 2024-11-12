@@ -6,20 +6,20 @@ let gameTiles = 9;
 let time = 30;
 let id = "gameOverScreen";
 let mensagemFim = ""
+let tempoJogo = 1000
 
 window.onload = function() {
     setGame();
     document.querySelectorAll('.square').forEach(item => {
         item.addEventListener('click', selectTile)
       })
-      console.log("é sim")
 }
 
 function setGame(){
 
     setInterval(timer, 1000);
-    setInterval(setBaby, 1000);
-    setInterval(setLeviatan, 2000);
+    setInterval(setBaby, tempoJogo);
+    setInterval(setLeviatan, tempoJogo * 2);
 }
 
 function timer(){
@@ -34,19 +34,20 @@ function timer(){
     }
 }
 
-function currentDifficulty(){
-    for(let i = 9; i < 12; i++){
+function increaseDifficulty(){
+    /*for(let i = 9; i < 12; i++){
         let square = document.createElement("div");
         square.id = i.toString();
+        square.id = "extraTile";
         square.className = "square";
         square.addEventListener("click", selectTile);
 
-        document.getElementById("tela").appendChild(square);
-        console.log(square)
+        document.getElementById("gameGrid").appendChild(square);
 
+        tempoJogo = 650
     }
     gameTiles = 12;
-    document.getElementById("tela").style.width = "840px";
+    document.getElementById("gameGrid").style.width = "840px";*/
     document.body.style.backgroundImage = "url(../jogo/img/fundo1.jpeg)"
     document.body.style.color = 'white'
 }
@@ -99,7 +100,7 @@ function selectTile() {
     
     if(this == BabyLeviatanTile){
         if(score == 90){
-            currentDifficulty();
+            increaseDifficulty();
         }
         score += 10;
         document.getElementById("score").innerText = "Pontuação: " + score.toString();
@@ -149,6 +150,8 @@ function createGameOver(){
     restartButton.style.marginInline = "auto"
     restartButton.style.top = "530px"
     restartButton.textContent = "Reiniciar"
+    restartButton.style.border = "5px solid black"
+    restartButton.style.borderRadius = "20px"
 
 
     //texto da pontuação final
@@ -177,8 +180,19 @@ function createGameOver(){
     while(upSpace.hasChildNodes()){
         upSpace.removeChild(upSpace.firstChild);
     }
+
+    //voltando os elementos com estilo original
     document.getElementById("title").style.fontSize = "2em"
     document.getElementById("title").style.fontWeight= "bold"
     document.getElementById("score").innerText = "Pontuação: 0"
+    document.body.style.backgroundImage = "url(../jogo/img/fundo2.jpeg)"
+    document.body.style.color = 'black'
     time = 30;
+    score = 0
+    gameTiles = 9
+
+    /*for(let x = 0; x < 3; x++){
+        let gameGrid = document.getElementById("gameGrid")
+        gameGrid.removeChild(gameGrid.firstChild)
+    }*/
 }
