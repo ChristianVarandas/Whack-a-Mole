@@ -5,11 +5,9 @@ let gameOver = false;
 let gameTiles = 9;
 let time = 30;
 let id = "gameOverScreen";
+let mensagemFim = ""
 
 window.onload = function() {
-    if(document.getElementsByClassName("h2").innerText == "Pontuação: 0"){
-        console.log("Eu criei um monstro")
-    }
     setGame();
     document.querySelectorAll('.square').forEach(item => {
         item.addEventListener('click', selectTile)
@@ -18,7 +16,7 @@ window.onload = function() {
 }
 
 function setGame(){
-    
+
     setInterval(timer, 1000);
     setInterval(setBaby, 1000);
     setInterval(setLeviatan, 2000);
@@ -31,6 +29,7 @@ function timer(){
     if(time < 0){
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); 
         gameOver = true;
+        mensagemFim = "Acabou o tempo!"
         createGameOver();
     }
 }
@@ -112,36 +111,74 @@ function selectTile() {
     if(this == LeviatanTile) {
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); 
         gameOver = true;
+        mensagemFim = "Game Over!"
         createGameOver();
     }
 }
 
+
+
 function createGameOver(){
-    let screen = document.createElement("div");
-    screen.id = "gameOverScreen";
-    screen.className = "gameOverClass";
+    let screen = document.createElement("h2");
+    let restartButton = document.createElement("button")
+    let finalScore = document.createElement("h3")
+
+    //propriedades do quadrado e fundo
     screen.style.backgroundImage = "url(../jogo/img/fundo3.jpeg)"
     screen.style.margin = "0"
-    screen.style.width = "400px"
-    screen.style.height = "300px"
+    screen.style.width = "98%"
+    screen.style.height = "85%"
     screen.style.position = "absolute"
     screen.style.left = "0"
     screen.style.right = "0"
     screen.style.marginInline = "auto"
-    screen.style.top = "180px"
-    screen.textContent = "Game Over!" + score;
-    screen.style.fontSize = "50px"
+    screen.style.top = "100px"
+    screen.textContent = mensagemFim.toString();
+    screen.style.fontSize = "150px"
+    screen.style.border = "5px solid black"
+    
+
+    //propriedades do botão
+    restartButton.style.position = "absolute"
+    restartButton.style.fontSize = "50px"
+    restartButton.addEventListener("click", restartGame)
+    restartButton.style.width = "270px"
+    restartButton.style.height = "180px"
+    restartButton.style.left = "0"
+    restartButton.style.right = "0"
+    restartButton.style.marginInline = "auto"
+    restartButton.style.top = "530px"
+    restartButton.textContent = "Reiniciar"
+
+
+    //texto da pontuação final
+    finalScore.style.position = "absolute"
+    finalScore.style.fontSize = "35px"
+    finalScore.textContent = "Pontuação Final: " + score
+    finalScore.style.left = "0"
+    finalScore.style.right = "0"
+    finalScore.style.marginInline = "auto"
+    finalScore.style.fontSize = "80px"
+    finalScore.style.top = "240px"
+
+    document.getElementById("score").innerText = "";
+    document.getElementById("title").style.fontSize = "50px"
     document.getElementById("space").appendChild(screen);
+    document.getElementById("space").appendChild(finalScore)
+
+    document.getElementById("space").appendChild(restartButton);
+
 }
 
-/*let square = document.createElement("div");
-square.id = i.toString();
-square.className = "square";
 
-document.getElementById("tela").appendChild(square);
-
-position: absolute; 
-  left: 0; 
-  right: 0; 
-  margin-inline: auto; 
-  width: fit-content;*/
+  function restartGame(){
+    let upSpace = document.getElementById("space")
+    gameOver = false
+    while(upSpace.hasChildNodes()){
+        upSpace.removeChild(upSpace.firstChild);
+    }
+    document.getElementById("title").style.fontSize = "2em"
+    document.getElementById("title").style.fontWeight= "bold"
+    document.getElementById("score").innerText = "Pontuação: 0"
+    time = 30;
+}
