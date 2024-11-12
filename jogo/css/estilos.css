@@ -3,7 +3,7 @@ html{
 }
 body{
 	text-align: center;
-	background-image: url(../img/fundo1.jpeg);
+	background-image: url(../img/fundo2.jpeg);
 	background-repeat:no-repeat;
 	background-size: cover;
 }
@@ -45,21 +45,4 @@ body{
 	margin: 0;
 	font-size: 60px;
 	margin-left: 30px;
-}
-
-button{
-	width: 200px;
-	height: 60px;
-	font-size: 32px;
-	background-color: rgb(255, 255, 255);
-}
-
-#derrota{
-	font-size: 92px;
-	color: aliceblue;
-}
-
-#PontoFim{
-	font-size: 62px;
-	color: aliceblue;
 }
