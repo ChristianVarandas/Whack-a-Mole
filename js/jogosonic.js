@@ -7,12 +7,15 @@ let time = 30;
 let id = "gameOverScreen";
 let mensagemFim = ""
 let tempoJogo = 1000
+const audioM = new Audio('js/mouseclickaudio.mp3')
+const AudioS = new Audio('js/Soundtrack.mp3')
 
 window.onload = function() {
     setInterval(timer, 1000);
     setInterval(setGame, 1000);
     document.querySelectorAll('.square').forEach(item => {
         item.addEventListener('click', selectTile)
+        
       })
 }
 
@@ -20,6 +23,7 @@ function setGame(){
     setBaby()
     setLeviatan()
     console.log("a")
+    AudioS.play()
 }
 
 function timer(){
@@ -108,6 +112,7 @@ function selectTile() {
         LeviatanTile.innerHTML = "";
         GameScore = score
         console.log(GameScore)
+        audioM.play()
         }
     if(this == BabyLeviatanTile) {
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); 
@@ -170,7 +175,6 @@ function createGameOver(){
     document.getElementById("space").appendChild(finalScore)
 
     document.getElementById("space").appendChild(restartButton);
-
 }
 
 
