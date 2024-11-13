@@ -48,7 +48,7 @@ function increaseDifficulty(){
     }
     gameTiles = 12;
     document.getElementById("gameGrid").style.width = "840px";*/
-    document.body.style.backgroundImage = "url(../img/fundo1.jpeg)"
+    document.body.style.backgroundImage = "url(/../img/fundo1.jpeg)"
     document.body.style.color = 'white'
 }
 
@@ -84,7 +84,7 @@ function setLeviatan() {
         LeviatanTile.innerHTML = "";
     }
     let leviatan = document.createElement("img");
-    leviatan.src = "../img/inimigo.png";
+    leviatan.src = "/../img/inimigo.png";
 
     let num = getRandomTile();
     if (BabyLeviatanTile && BabyLeviatanTile.id == num) {
@@ -125,7 +125,7 @@ function createGameOver(){
     let finalScore = document.createElement("h3")
 
     //propriedades do quadrado e fundo
-    screen.style.backgroundImage = "url(../img/fundo3.jpeg)"
+    screen.style.backgroundImage = "url(/../img/fundo3.jpeg)"
     screen.style.margin = "0"
     screen.style.width = "98%"
     screen.style.height = "85%"
@@ -185,7 +185,7 @@ function createGameOver(){
     document.getElementById("title").style.fontSize = "2em"
     document.getElementById("title").style.fontWeight= "bold"
     document.getElementById("score").innerText = "Pontuação: 0"
-    document.body.style.backgroundImage = "url(../img/fundo2.jpeg)"
+    document.body.style.backgroundImage = "url(/../img/fundo2.jpeg)"
     document.body.style.color = 'black'
     time = 30;
     score = 0
