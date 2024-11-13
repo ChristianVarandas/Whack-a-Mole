@@ -9,17 +9,17 @@ let mensagemFim = ""
 let tempoJogo = 1000
 
 window.onload = function() {
-    setGame();
+    setInterval(timer, 1000);
+    setInterval(setGame, 1000);
     document.querySelectorAll('.square').forEach(item => {
         item.addEventListener('click', selectTile)
       })
 }
 
 function setGame(){
-
-    setInterval(timer, 1000);
-    setInterval(setBaby, tempoJogo);
-    setInterval(setLeviatan, tempoJogo * 2);
+    setBaby()
+    setLeviatan()
+    console.log("a")
 }
 
 function timer(){
@@ -48,7 +48,7 @@ function increaseDifficulty(){
     }
     gameTiles = 12;
     document.getElementById("gameGrid").style.width = "840px";*/
-    document.body.style.backgroundImage = "url(../jogo/img/fundo1.jpeg)"
+    document.body.style.backgroundImage = "url(../img/fundo1.jpeg)"
     document.body.style.color = 'white'
 }
 
@@ -66,7 +66,7 @@ function setBaby(){
     }
 
 let baby = document.createElement("img");
-baby.src = "./img/inimigo.png";
+baby.src = "../img/babysac210.png";
 
 let num = getRandomTile();
 if (LeviatanTile && LeviatanTile.id == num) {
@@ -84,7 +84,7 @@ function setLeviatan() {
         LeviatanTile.innerHTML = "";
     }
     let leviatan = document.createElement("img");
-    leviatan.src = "img/babysac210.png";
+    leviatan.src = "../img/inimigo.png";
 
     let num = getRandomTile();
     if (BabyLeviatanTile && BabyLeviatanTile.id == num) {
@@ -98,18 +98,18 @@ function setLeviatan() {
 function selectTile() {
     if (gameOver) {return;}
     
-    if(this == BabyLeviatanTile){
+    if(this == LeviatanTile){
         if(score == 90){
             increaseDifficulty();
         }
         score += 10;
         document.getElementById("score").innerText = "Pontuação: " + score.toString();
-        BabyLeviatanTile = 
-        BabyLeviatanTile.innerHTML = "";
+        LeviatanTile = 
+        LeviatanTile.innerHTML = "";
         GameScore = score
         console.log(GameScore)
         }
-    if(this == LeviatanTile) {
+    if(this == BabyLeviatanTile) {
         document.getElementById("score").innerText = "GAME OVER: " + score.toString(); 
         gameOver = true;
         mensagemFim = "Game Over!"
@@ -125,7 +125,7 @@ function createGameOver(){
     let finalScore = document.createElement("h3")
 
     //propriedades do quadrado e fundo
-    screen.style.backgroundImage = "url(../jogo/img/fundo3.jpeg)"
+    screen.style.backgroundImage = "url(../img/fundo3.jpeg)"
     screen.style.margin = "0"
     screen.style.width = "98%"
     screen.style.height = "85%"
@@ -185,7 +185,7 @@ function createGameOver(){
     document.getElementById("title").style.fontSize = "2em"
     document.getElementById("title").style.fontWeight= "bold"
     document.getElementById("score").innerText = "Pontuação: 0"
-    document.body.style.backgroundImage = "url(../jogo/img/fundo2.jpeg)"
+    document.body.style.backgroundImage = "url(../img/fundo2.jpeg)"
     document.body.style.color = 'black'
     time = 30;
     score = 0
